@@ -1,12 +1,16 @@
 import React from 'react'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
+
 import * as wasm from 'wasm'
+import factory from '../../wasm-cpp/hello'
+
+wasm.greet_console()
+
+factory().then((instance: any) => {
+  instance._hello_react()
+})
 
 export default function App({ Component, pageProps }: AppProps) {
-  React.useEffect(() => {
-    wasm.greet_console()
-  })
-
   return <Component {...pageProps} />
 }
