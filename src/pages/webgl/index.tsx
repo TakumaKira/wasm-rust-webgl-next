@@ -1,4 +1,6 @@
 import React from 'react'
+import { mat4 } from 'gl-matrix'
+import webGLDemo from '@/lib/webgl-3d-demo'
 
 export default function WebGL() {
   const [gl, setGl] = React.useState<WebGLRenderingContext>()
@@ -21,8 +23,7 @@ export default function WebGL() {
     if (!gl) {
       return
     }
-    gl.clearColor(1.0, 0.0, 0.0, 1.0)
-    gl.clear(gl.COLOR_BUFFER_BIT)
+    webGLDemo(gl, mat4)
   }, [gl])
   React.useEffect(draw, [draw])
 
