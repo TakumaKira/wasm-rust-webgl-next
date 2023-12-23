@@ -5,7 +5,7 @@ import * as wasm from 'wasm'
 
 export default function App({ Component, pageProps }: AppProps) {
   React.useEffect(() => {
-    wasm.greet()
+    wasm.greet_console()
   })
 
   return <Component {...pageProps} />
