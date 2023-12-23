@@ -2,7 +2,21 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
-First, run the development server:
+First, build wasm:
+
+```bash
+cd wasm
+wasm-pack build
+cd ..
+```
+
+If you need to update wasm, use the update command:
+
+```bash
+yarn update:wasm
+```
+
+Next, run the development server:
 
 ```bash
 npm run dev
