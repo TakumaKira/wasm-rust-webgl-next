@@ -21,7 +21,7 @@ const infoStyle: React.CSSProperties = {
   zIndex: 1,
 }
 
-export default function ThreePage(script: (containerRef: HTMLDivElement) => void) {
+export default function ThreePage(script: (containerRef: HTMLDivElement) => void, info: JSX.Element) {
   return function Page() {
     const containerRef = React.useRef<HTMLDivElement>(null)
 
@@ -40,9 +40,7 @@ export default function ThreePage(script: (containerRef: HTMLDivElement) => void
       <div style={divStyle}>
         <div ref={containerRef}></div>
         <div id="info" style={infoStyle}>
-          <a href="https://threejs.org" target="_blank" rel="noopener" style={aStyle}>three.js</a> - <a href="http://www.minecraft.net/" target="_blank" rel="noopener" style={aStyle}>minecraft</a> demo. featuring <a href="http://painterlypack.net/" target="_blank" rel="noopener" style={aStyle}>painterly pack</a>
-          <br />
-          (left click: forward, right click: backward)
+          {info}
         </div>
       </div>
     )
