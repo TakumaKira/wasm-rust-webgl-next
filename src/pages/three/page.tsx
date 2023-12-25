@@ -24,16 +24,12 @@ const infoStyle: React.CSSProperties = {
 export default function ThreePage(script: (containerRef: HTMLDivElement) => void) {
   return function Page() {
     const containerRef = React.useRef<HTMLDivElement>(null)
-    const [isMounted, setIsMounted] = React.useState(false)
 
     React.useEffect(() => {
       if (!containerRef.current) {
         return
       }
-      if (isMounted) {
-        return
-      }
-      setIsMounted(true)
+      containerRef.current?.childNodes.forEach(childNode => childNode.remove())
       script(containerRef.current)
       return () => {
         containerRef.current?.childNodes.forEach(childNode => childNode.remove())
