@@ -6,9 +6,11 @@ import * as wasm from 'wasm'
 import factory from '../../wasm-cpp/lib'
 
 wasm.greet_console()
+console.log(wasm.fibonacci(45))
 
 factory().then((instance: any) => {
   instance._greet_console()
+  console.log(instance._fibonacci(45))
 })
 
 export default function App({ Component, pageProps }: AppProps) {
