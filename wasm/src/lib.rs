@@ -9,7 +9,7 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn greet() {
-    alert("Hello, wasm!");
+    alert("Hello from Rust!");
 }
 
 extern crate web_sys;
@@ -23,5 +23,5 @@ macro_rules! log {
 
 #[wasm_bindgen]
 pub fn greet_console() {
-    log!("Hello, wasm!");
+    log!("Hello from Rust!");
 }
