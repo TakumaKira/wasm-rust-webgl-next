@@ -4,10 +4,10 @@
 #include <stdio.h>
 
 extern "C" {
-  void hello_react() {
-    printf("Hello, React!\n");
+  void greet_console() {
+    printf("Hello from C++!\n");
   }
 }
 
 // Build WASM with the command below:
-// em++ lib.cpp -o lib.js -sMODULARIZE -sSINGLE_FILE=1 -sEXPORTED_FUNCTIONS=_hello_react,_malloc,_free,getValue -sEXPORTED_RUNTIME_METHODS=ccall
+// em++ lib.cpp -o lib.js -sMODULARIZE -sSINGLE_FILE=1 -sEXPORTED_FUNCTIONS=_greet_console,_malloc,_free,getValue -sEXPORTED_RUNTIME_METHODS=ccall

@@ -21,7 +21,7 @@ You can update wasm-cpp using emscripten.
 ```bash
 cd wasm-cpp
 source path/to/emsdk/emsdk_env.sh
-em++ lib.cpp -o lib.js -sMODULARIZE -sSINGLE_FILE=1 -sEXPORTED_FUNCTIONS=_hello_react,_malloc,_free,getValue -sEXPORTED_RUNTIME_METHODS=ccall
+em++ lib.cpp -o lib.js -sMODULARIZE -sSINGLE_FILE=1 -sEXPORTED_FUNCTIONS=_greet_console,_malloc,_free,getValue -sEXPORTED_RUNTIME_METHODS=ccall
 cd ..
 ```
 

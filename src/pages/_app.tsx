@@ -8,7 +8,7 @@ import factory from '../../wasm-cpp/lib'
 wasm.greet_console()
 
 factory().then((instance: any) => {
-  instance._hello_react()
+  instance._greet_console()
 })
 
 export default function App({ Component, pageProps }: AppProps) {
