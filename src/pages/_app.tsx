@@ -3,7 +3,7 @@ import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 
 import * as wasm from 'wasm'
-import factory from '../../wasm-cpp/hello'
+import factory from '../../wasm-cpp/lib'
 
 wasm.greet_console()
 
