@@ -5,12 +5,14 @@ import type { AppProps } from 'next/app'
 import * as wasm from 'wasm'
 import factory from '../../wasm-cpp/lib'
 
-wasm.greet_console()
+console.time('Rust')
 console.log(wasm.fibonacci(45))
+console.timeEnd('Rust')
 
 factory().then((instance: any) => {
-  instance._greet_console()
+  console.time('C++')
   console.log(instance._fibonacci(45))
+  console.timeEnd('C++')
 })
 
 export default function App({ Component, pageProps }: AppProps) {
