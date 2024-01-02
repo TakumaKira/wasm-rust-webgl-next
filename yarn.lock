@@ -489,6 +489,11 @@ axobject-query@^3.2.1:
   dependencies:
     dequal "^2.0.3"
 
+babylonjs@^6.36.1:
+  version "6.36.1"
+  resolved "https://registry.yarnpkg.com/babylonjs/-/babylonjs-6.36.1.tgz#e3934a95a280947cf848023723a04f307c380dda"
+  integrity sha512-uA6+ubnUp8VJIKiOyih1adId/vKgflfZmbDHHBsI7WTBXlwE/tCsXZk8nFgrWVk5fAiZdyqzq3OoPrw4wF53nA==
+
 balanced-match@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.2.tgz#e83e3a7e3f300b34cb9d87f615fa0cbf357690ee"
