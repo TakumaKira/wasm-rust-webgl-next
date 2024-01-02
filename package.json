@@ -10,6 +10,7 @@
     "update:wasm": "yarn remove wasm && rm -rf .next && yarn add file:./wasm/pkg"
   },
   "dependencies": {
+    "babylonjs": "^6.36.1",
     "gl-matrix": "^3.4.3",
     "next": "14.0.4",
     "react": "^18",
